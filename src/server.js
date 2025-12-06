@@ -5,9 +5,11 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
+
 app.use(express.json());
 app.use(cors());
-const DB_PATH = join(__dirname, 'database.json');
+
+const DB_PATH = path.join(__dirname, 'database.json');
 
 async function loadDB() {
   try {
