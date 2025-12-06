@@ -5,9 +5,8 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
+app.use(express.json());
 app.use(cors());
-app.use(json());
-
 const DB_PATH = join(__dirname, 'database.json');
 
 async function loadDB() {
