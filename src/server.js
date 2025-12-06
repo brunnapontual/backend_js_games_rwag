@@ -1,8 +1,8 @@
 require('dotenv').config();
-import express, { json } from 'express';
-import { promises as fs } from 'fs';
-import cors from 'cors';
-import { join } from 'path';
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs').promises;
+const path = require('path');
 
 const app = express();
 app.use(cors());
